@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="../icon.png" alt="Tomato with a clock at it's center" />
+        Pomodor Timer Options
+      </h1>
+    </header>
+    <section>
+      <article>
+        <label for="default-time-input">Default Time in Minutes(1-60):</label>
+        <input
+          id="default-time-input"
+          type="number"
+          min="1"
+          max="60"
+          placeholder="Minutes"
+        />
+        <button id="set-default-btn">Save Options</button>
+      </article>
+    </section>
+  </body>
+  <script src="options.js"></script>
+</html>
