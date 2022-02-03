@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Nav to tipranks",
+  "description": "Nav to tipranks from stock charts",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Nav to tipranks",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["contextMenus", "search", "tabs", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://stockcharts.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
