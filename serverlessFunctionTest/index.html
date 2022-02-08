@@ -9,4 +9,15 @@
   <body>
     <div></div>
   </body>
+  <script>
+    let url = "http://localhost:8888/api/getSite?ticker=slrx";
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+  </script>
 </html>

@@ -1,12 +1,13 @@
 chrome.runtime.onInstalled.addListener((details) => {
-  chrome.storage.local.set({ ticker: "" });
+  chrome.storage.local.set({ ticker: "", tickerData: {} });
   chrome.contextMenus.create({
-    title: "Search",
+    title: "Price Target",
     id: "search",
     contexts: ["page"],
     documentUrlPatterns: ["https://stockcharts.com/*"],
   });
 });
+
 chrome.contextMenus.onClicked.addListener((menu) => {
   chrome.storage.local.get(["ticker"], (res) => {
     const ticker = res.ticker;

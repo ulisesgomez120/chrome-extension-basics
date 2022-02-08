@@ -19,7 +19,10 @@
   "permissions": ["contextMenus", "search", "tabs", "storage"],
   "content_scripts": [
     {
-      "matches": ["https://stockcharts.com/*"],
+      "matches": [
+        "https://stockcharts.com/*",
+        "https://testext.netlify.app/api/getSite"
+      ],
       "js": ["contentScript.js"]
     }
   ]
