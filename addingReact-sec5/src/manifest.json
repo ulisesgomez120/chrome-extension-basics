@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "React Extension",
+  "description": "Chrome Extension in React!",
+  "version": "1.0.0",
+  "action": {
+    "deafult_popup": "popup.html",
+    "deafult_title": "Webpack test"
+  }
+}
